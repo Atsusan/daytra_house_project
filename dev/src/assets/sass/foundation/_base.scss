@@ -1,0 +1,22 @@
+@use "../global" as g;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: g.$text-color;
+    font-family: g.$ff-base;
+    font-size: g.$fz-base;
+    font-weight: g.$fw-base;
+    line-height: g.$lh-base;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+}

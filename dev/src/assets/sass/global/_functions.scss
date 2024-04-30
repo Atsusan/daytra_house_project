@@ -1,0 +1,13 @@
+@use "sass:math";
+
+// /* remの計算 */
+// html font-size: 100%; の指定の際はこちらを使う
+// $baseFontSize: 16;
+// @function rem($pixels) {
+//     @return math.div($pixels, $baseFontSize) * 1rem;
+// }
+
+// vwの計算
+@function vw($pixels, $vSize) {
+    @return math.div($pixels, $vSize) * 100vw;
+}
