@@ -1,14 +1,20 @@
 @use "../global" as g;
 
 .l-inner {
-    max-width: calc(1000px + 40px + 40px);
-    padding-left: 40px;
-    padding-right: 40px;
+    max-width: 144rem;
+    padding-left: 12rem;
+    padding-right: 12rem;
     margin-right: auto;
     margin-left: auto;
-
     @include g.mq(sp) {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    &--large {
+        @extend .l-inner;
+
+        padding-left: 11rem;
+        padding-right: 11.5rem;
     }
 }
