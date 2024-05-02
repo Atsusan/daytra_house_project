@@ -7,8 +7,8 @@
     margin-right: auto;
     margin-left: auto;
     @include g.mq(sp) {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     &--large {
@@ -16,5 +16,8 @@
 
         padding-left: 11rem;
         padding-right: 11.5rem;
+        @include g.mq(sp) {
+            padding-left: 1.4rem;
+        }
     }
 }

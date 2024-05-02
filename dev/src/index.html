@@ -46,7 +46,7 @@
                     <img src="./assets/images/icon/logo.svg" alt="デイトラハウス" class="p-header__logoImg">
                 </a>
             </h1>
-            <nav class="p-header__nav">
+            <nav class="p-header__nav u-dispNone--flexPU">
                 <ul class="p-header__list">
                     <li class="p-header__item">
                         <a href="#about" class="p-header__itemLink">About</a>
@@ -70,6 +70,69 @@
                     </div>
                 </div>
             </nav>
+            <!-- ▼ drower menu -->
+            <div class="p-drower u-dispNone--PO">
+                <div class="js-openbtn p-drower__iconBox">
+                    <span class="p-drower__icon"></span>
+                </div>
+                <nav id="js-g-nav" class="p-drower__nav">
+                    <div id="js-g-nav-list" class="p-drower__listArea">
+                        <ul class="p-drower__list">
+                            <li class="p-drower__item">
+                                <a class="p-drower__link" href="#about">About</a>
+                            </li>
+                            <li class="p-drower__item">
+                                <a class="p-drower__link" href="#news">News</a>
+                            </li>
+                            <li class="p-drower__item">
+                                <a class="p-drower__link" href="#event">Event</a>
+                            </li>
+                            <li class="p-drower__item">
+                                <a class="p-drower__link" href="#info">Infomation</a>
+                            </li>
+                            <li class="p-drower__item">
+                                <a class="p-drower__link" href="#voice">入居者の声</a>
+                            </li>
+                        </ul>
+                        <div class="p-drower__btnArea">
+                            <!-- ▼ c-roundBtn -->
+                            <div class="c-roundBtn">
+                                <a href="#contact" class="c-roundBtn__link">お問い合わせはこちら</a>
+                            </div>
+                            <!-- ▲ c-roundBtn -->
+                        </div>
+                        <div class="p-drower__snsArea">
+                            <!-- ▼ c-sns -->
+                            <div class="c-sns">
+                                <p class="c-sns__read">Follow me!</p>
+                                <ul class="c-sns__list">
+                                    <li class="c-sns__item">
+                                        <a href="https://twitter.com/" class="c-sns__link" target="_blank">
+                                            <img src="./assets/images/icon/sns-x-drower.svg" alt="X" class="c-sns__icon"
+                                                width="35" height="36">
+                                        </a>
+                                    </li>
+                                    <li class="c-sns__item">
+                                        <a href="https://www.instagram.com/" class="c-sns__link" target="_blank">
+                                            <img src="./assets/images/icon/sns-insta-drower.svg" alt="instagram"
+                                                class="c-sns__icon" width="35" height="36">
+                                        </a>
+                                    </li>
+                                    <li class="c-sns__item">
+                                        <a href="https://youtube.com/" class="c-sns__link" target="_blank">
+                                            <img src="./assets/images/icon/sns-youtube-drower.svg" alt="youtube"
+                                                class="c-sns__icon" width="39" height="28">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- ▲ c-sns -->
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+            <!-- ▲ drower menu -->
         </div>
     </header>
     <!-- ▲ p-header -->
@@ -78,36 +141,39 @@
     <main class="top">
         <!-- ▼ p-mv -->
         <section class="p-mv">
-            <div class="l-inner">
+            <div class="l-inner p-mv__inner">
                 <div class="p-mv__col">
                     <div class="p-mv__txtContainer">
                         <div class="p-mv__txtBox">
                             <p class="p-mv__read">オンラインスクール運営のスキル実践型シェアハウス</p>
                             <h2 class="p-mv__mainText">
-                                デイトラハウスで
+                                デイトラハウス<span class="p-mv__mainTextSp">で</span>
                                 <br>
-                                <span class="p-mv__mainTextLarge">仲間と共にWebスキル</span>を
+                                <span class="p-mv__mainTextLarge">仲間と共にWebスキル</span><span class="p-mv__mainTextSp">を</span>
                                 <br>
                                 身につけよう！
                             </h2>
                         </div>
                         <ul class="p-mv__pointList">
                             <li class="p-mv__pointItem">
-                                デイトラ生
-                                <br>
-                                <span class="p-mv__pointItem--large">限定</span>
+                                <p class="p-mv__pointText">
+                                    デイトラ生
+                                    <span class="p-mv__pointTextLarge">限定</span>
+                                </p>
                             </li>
                             <li class="p-mv__pointItem">
-                                副業
-                                <br>
-                                <span class="p-mv__pointItem--small">フリーランス</span>
-                                <br>
-                                <span class="p-mv__pointItem--large">歓迎</span>
+                                <p class="p-mv__pointText">
+                                    副業
+                                    <span class="p-mv__pointTextSmall">フリーランス</span>
+                                    <span class="p-mv__pointTextLarge">歓迎</span>
+                                </p>
                             </li>
                             <li class="p-mv__pointItem">
-                                個別相談
-                                <br>
-                                可能
+                                <p class="p-mv__pointText--mtLarge">
+                                    個別相談
+                                    <br>
+                                    可能
+                                </p>
                             </li>
                         </ul>
                         <div class="p-mv__btnContainer">

@@ -1,0 +1,61 @@
+@use '../global' as g;
+
+.c-sns {
+    width: fit-content;
+    &__read {
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        @include g.mq(sp) {
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: normal;
+            color: g.$text-color;
+            display: flex;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 1em;
+            width: 2px;
+            background-color: g.$text-color;
+        }
+        &::before {
+            left: 1.4rem;
+            transform: translateY(-44%) rotate(-32deg);
+        }
+
+        &::after {
+            right: 1.4rem;
+            transform: translateY(-44%) rotate(32deg);
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+
+    &__item {
+    }
+    &__link {
+        display: block;
+        transition: opacity .3s;
+
+        &:hover {
+            @include g.mq(hover) {
+                opacity: .7;
+            }
+        }
+    }
+    &__icon {
+    }
+}

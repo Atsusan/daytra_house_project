@@ -20,3 +20,21 @@ img {
 a {
     color: inherit;
 }
+
+@media screen and (min-width: 769px) and (max-width: 1180px) {
+    html {
+        font-size: calc(1000vw / 1180);
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 768px) {
+    html {
+        font-size: calc(1000vw / 376);
+    }
+}
+
+@media screen and (max-width: 375px) {
+    html {
+        font-size: calc(1000vw / 375);
+    }
+}

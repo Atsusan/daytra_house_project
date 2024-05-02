@@ -3,10 +3,13 @@ $main-color: #4EB2D0; // メインカラー
 $sub-color: #1C5C83 ; // サブカラー
 $base-color: #EBF3F6; //　ベースカラー
 $text-color: #000; // テキストカラー
+$cBlue: #65A4E0;
 $cWhite: #fff;
-$cGray: #eff0f5; // グレー
+$cGray: #707070; // グレー
 
 // グラデーション
+$cGradient-mvText: linear-gradient(123deg, #F6BC42 23.19%, #FF5C00 76.81%);
+$cGradient-mvBox: linear-gradient(143deg, #FCE3E4 5.3%, #00A2E8 94.7%);
 $cGradient1: linear-gradient(90deg, #599AE0 0%, #B7E7DC 100%);
 $cGradient1-hover: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(90deg, #599AE0 0%, #B7E7DC 100%);
 $cGradient2: linear-gradient(93deg, #3EC4A5 5.67%, #52EDAD 94.33%);
@@ -15,7 +18,7 @@ $cGradient2-hover: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0
 
 // フォント
 $ff-base: "Noto Sans JP", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; // 日本語標準
-$fz-base: 16px; // ベースフォントサイズ
+$fz-base: 1.6rem; // ベースフォントサイズ
 $fw-base: 400; // ベースフォントウェイト
 $lh-base: 1.6; // ベース行間
 
