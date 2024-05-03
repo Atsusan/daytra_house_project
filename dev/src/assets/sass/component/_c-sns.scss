@@ -6,6 +6,8 @@
         position: relative;
         display: flex;
         justify-content: center;
+        width: fit-content;
+        margin: 0 auto;
 
         @include g.mq(sp) {
             font-size: 2rem;
@@ -26,12 +28,12 @@
             background-color: g.$text-color;
         }
         &::before {
-            left: 1.4rem;
+            left: -1rem;
             transform: translateY(-44%) rotate(-32deg);
         }
 
         &::after {
-            right: 1.4rem;
+            right: -1rem;
             transform: translateY(-44%) rotate(32deg);
         }
     }
