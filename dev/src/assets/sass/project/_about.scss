@@ -1,0 +1,198 @@
+@use '../global' as g;
+
+.p-about {
+    margin-top: 6.2rem;
+    overflow-x: hidden;
+    @include g.mq(sp) {
+        margin-top: 6.4rem;
+    }
+
+    &__inner {
+        position: relative;
+    }
+
+    &__sectionBox {
+        //
+    }
+
+    &__col {
+        margin-top: 5.2rem;
+        display: flex;
+        align-items: center;
+        gap: 7.5rem;
+        margin-left: 4rem;
+        position: relative;
+        @include g.mq(sp) {
+            flex-direction: column;
+            gap: 4.5rem;
+            margin-left: 0;
+            margin-top: 3.1rem;
+        }
+    }
+
+    &__colImgBox {
+        max-width: 48.7rem;
+        width: 100%;
+        @include g.mq(sp) {
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+            width: 100vw;
+        }
+    }
+
+    &__colImg {
+        width: 100%;
+    }
+
+    &__colContents {
+        max-width: 50rem;
+    }
+
+    &__colTitle {
+        font-size: 3.2rem;
+        font-weight: 400;
+        line-height: normal;
+        color: g.$text-color;
+        @include g.mq(sp) {
+            font-size: 2rem;
+        }
+    }
+
+    &__colText {
+        margin-top: 2.6rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 3.3rem;
+        color: g.$text-color;
+        @include g.mq(sp) {
+            font-size: 1.4rem;
+            margin-top: 1.4rem;
+        }
+    }
+
+    &__colBgImg {
+        max-width: 19.4rem;
+        width: 100%;
+        position: absolute;
+        top: -7.5rem;
+        left: -14.5rem;
+        z-index: -1;
+    }
+
+    &__listArea {
+        background-color: g.$base-color;
+        padding: 6.5rem 2% 5.1rem;
+        margin-top: 8.1rem;
+        position: relative;
+        @include g.mq(sp) {
+            padding: 3.5rem 2% 5.6rem;
+            margin-top: 2.8rem;
+        }
+    }
+
+    &__listHeading {
+        text-align: center;
+        font-size: 3.2rem;
+        font-weight: 500;
+        line-height: normal;
+        color: g.$text-color;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3.6rem;
+        @include g.mq(sp) {
+            font-size: 2rem;
+        }
+
+        &::before,&::after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 10.1rem;
+            background-color: g.$text-color;
+            @include g.mq(sp) {
+                display: none;
+            }
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
+        }
+    }
+
+    &__list {
+        margin-top: 6.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 9rem;
+        max-width: 82.1rem;
+        margin: 0 auto;
+        @include g.mq(sp) {
+            margin-top: 3.5rem;
+            gap: 6rem;
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 38.6rem;
+        @include g.mq(sp) {
+            min-height: unset;
+        }
+    }
+
+    &__head {
+        max-width: 20rem;
+        width: 100%;
+        @include g.mq(sp) {
+            margin:  0 auto;
+        }
+    }
+
+    &__headImg {
+        width: 100%;
+    }
+
+    &__body {
+        margin-top: 2.5rem;
+        @include g.mq(sp) {
+            margin-top: 2.4rem;
+        }
+    }
+
+    &__bodyTitle {
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: normal;
+        color: g.$text-color;
+        text-align: center;
+    }
+
+    &__bodyText {
+        margin-top: 1.3rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: normal;
+        color: g.$text-color;
+        margin: 0 auto;
+        @include g.mq(sp) {
+            max-width: 25.4rem;
+        }
+    }
+
+    &__listBgImg {
+        max-width: 15.9rem;
+        width: 100%;
+        position: absolute;
+        right: -9.1%;
+        top: -21%;
+    }
+}

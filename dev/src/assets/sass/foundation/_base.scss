@@ -21,9 +21,9 @@ a {
     color: inherit;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1180px) {
+@media screen and (min-width: 769px) and (max-width: 1280px) {
     html {
-        font-size: calc(1000vw / 1180);
+        font-size: calc(1000vw / 1280);
     }
 }
 
