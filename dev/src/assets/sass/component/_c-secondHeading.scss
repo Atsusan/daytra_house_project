@@ -11,4 +11,13 @@
         font-size: 2.4rem;
         margin-left: 0;
     }
+
+    &--fzLargeSP {
+        @extend .c-secondHeading;
+
+        @include g.mq(sp) {
+            font-size: 3.2rem;
+            margin-left: -1.4rem;
+        }
+    }
 }
