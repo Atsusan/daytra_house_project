@@ -1,0 +1,145 @@
+@use '../global' as g;
+
+.p-event {
+    background-color: g.$base-color;
+    padding: 7.5rem 0 11.5rem;
+    margin-top: 9.2rem;
+
+    &__sectionBox {
+        position: relative;
+        z-index: 11;
+    }
+
+    &__list {
+        margin-top: 7.1rem;
+    }
+
+    &__itemCol {
+        display: flex;
+
+        &--second {
+            @extend .p-event__itemCol;
+            flex-direction: row-reverse;
+            margin-top: 7rem;
+
+            .p-event__contentsBox {
+                margin-left: -11rem;
+                @include g.mq(sp) {
+                    margin-left: 0;
+                }
+            }
+
+            .p-event__number {
+                background-image: g.$cGradient-number2;
+            }
+
+            .p-event__iconBox {
+                max-width: 28.7rem;
+                top: -5.6rem;
+                left: 16.5rem;
+            }
+        
+            .p-event__icon {
+        
+            }
+
+            .p-event__title {
+                margin-top: -0.6rem;
+                margin-left: -0.8rem;
+            }
+
+            .p-event__text {
+                margin-top: 1.5rem;
+                margin-left: -0.8rem;
+            }
+
+            .p-event__imgBox {
+                max-width: 81.4rem;
+                transform: translate(-9.3rem, -19.8rem);
+            }
+        }
+
+        &--third {
+            @extend .p-event__itemCol;
+
+            margin-top: -27rem;
+
+            .p-event__number {
+                background-image: g.$cGradient-number3;
+            }
+
+            .p-event__iconBox {
+                position: absolute;
+                max-width: 18.7rem;
+                top: 2.4rem;
+                right: -10rem;
+                left: unset;
+            }
+        
+            .p-event__icon {
+        
+            }
+
+            .p-event__text {
+                margin-top: 1.6rem;
+            }
+
+            .p-event__imgBox {
+                max-width: 58.8rem;
+                transform: translate(6rem, 0);
+            }
+        }
+    }
+
+    &__contentsBox {
+        position: relative;
+        z-index: 10;
+    }
+
+    &__number {
+        font-size: 6.4rem;
+        font-weight: 700;
+        line-height: normal;
+        background-image: g.$cGradient-number1;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__iconBox {
+        position: absolute;
+        max-width: 20rem;
+        top: -4rem;
+        left: 10rem;
+    }
+
+    &__icon {
+
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: normal;
+        color: g.$text-color;
+    }
+
+    &__text {
+        margin-top: 1.2rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 3.3rem;
+        color: g.$text-color;
+        max-width: 50rem;
+    }
+
+    &__imgBox {
+        width: 100%;
+        max-width: 62.8rem;
+        margin: 0 auto;
+        transform: translate(5.1rem, -4.2rem);
+    }
+
+    &__img {
+    }
+}

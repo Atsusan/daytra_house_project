@@ -160,6 +160,10 @@ $drawer-gap: 3rem; //item間隔
 
   &.is-active {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
     &::after {
       position: absolute;
       top: 5.6rem;

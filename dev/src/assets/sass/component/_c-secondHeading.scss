@@ -12,6 +12,16 @@
         margin-left: 0;
     }
 
+    &--fzLarge {
+        @extend .c-secondHeading;
+
+        font-size: 4rem;
+        margin-left: 0;
+        @include g.mq(sp) {
+            font-size: 3.2rem;
+            margin-left: -1.4rem;
+        }
+    }
     &--fzLargeSP {
         @extend .c-secondHeading;
 
