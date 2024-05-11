@@ -30,4 +30,13 @@
             margin-left: -1.4rem;
         }
     }
+    &--mlNonefzLarge {
+        @extend .c-secondHeading;
+
+        font-size: 4rem;
+        margin-left: 0;
+        @include g.mq(sp) {
+            font-size: 3.2rem;
+        }
+    }
 }
