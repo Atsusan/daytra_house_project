@@ -20,4 +20,13 @@
             padding-left: 1.4rem;
         }
     }
+
+    &--spPaddingLarge {
+        @extend .l-inner;
+
+        @include g.mq(sp) {
+            padding-left: 2.6rem;
+            padding-right: 2.6rem;
+        }
+    }
 }

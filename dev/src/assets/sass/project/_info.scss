@@ -1,0 +1,134 @@
+@use '../global' as g;
+
+.p-info {
+    background-color: g.$main-color;
+    padding: 4rem 0 7rem;
+    @include g.mq(sp) {
+        padding: 5rem 0 7.2rem;
+    }
+
+    &__sectionBox {
+    }
+    
+    &__list {
+        margin: 5.5rem auto 0;
+        margin-top: 5.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 110.6rem;
+        @include g.mq(sp) {
+            flex-direction: column;
+            margin-top: 3.3rem;
+        }
+    }
+
+    &__item {
+        margin-left: 7rem;
+        border-radius: 1.9rem;
+        background-color: g.$cWhite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 32.2rem;
+        min-height: 32.2rem;
+        padding: 2.9rem 2.8rem 1.5rem;
+        @include g.mq(sp) {
+            margin: 7.1rem auto 0;
+        }
+        &--mlNoneSpMtNone {
+            @extend .p-info__item;
+            margin-left: 0;
+            @include g.mq(sp) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__imgBox {
+        max-width: 9.4rem;
+
+        &--widthSmall {
+            @extend .p-info__imgBox;
+            max-width: 7.8rem;
+        }
+    }
+
+    &__img {
+    }
+
+    &__contentsBox {
+        margin-top: 3.2rem;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: normal;
+        color: g.$text-color;
+        text-align: center;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: normal;
+        color: g.$text-color;
+        margin-top: 0.9rem;
+    }
+
+    &__btnBox {
+        margin-top: auto;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+
+    &__btn {
+        display: block;
+        width: 100%;
+        padding: 0.4rem 1.9rem;
+        height: 3.7rem;
+        border-radius: .4rem;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: normal;
+        color: g.$cWhite;
+        transition: .4s;
+        position: relative;
+        z-index: 10;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: g.$main-color;
+            border-radius: .4rem;
+            z-index: -2;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #4EB2D0;
+            border-radius: .4rem;
+            z-index: -1;
+            transition: .4s;
+        }
+
+        &:hover {
+            &::after {
+                @include g.mq(hover) {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
