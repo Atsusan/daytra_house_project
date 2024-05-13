@@ -22,6 +22,15 @@
         }
     }
 
+    &--fzSmall {
+        @extend .c-secondHeading;
+
+        font-size: 3.2rem;
+        @include g.mq(sp) {
+            margin-left: -1.2rem;
+        }
+    }
+
     &--fzLarge {
         @extend .c-secondHeading;
 

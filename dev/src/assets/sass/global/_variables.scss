@@ -5,7 +5,10 @@ $base-color: #EBF3F6; //　ベースカラー
 $text-color: #000; // テキストカラー
 $cBlue: #65A4E0;
 $cWhite: #fff;
+$cLiteWhite: #F5F5F5;
 $cGray: #707070; // グレー
+$cLightGray: #d4d4d4;
+$cDarkGray: #939393;
 
 // グラデーション
 $cGradient-mvText: linear-gradient(123deg, #F6BC42 23.19%, #FF5C00 76.81%);
@@ -20,6 +23,9 @@ $cGradient-tag2: linear-gradient(89deg, #FF6584 0.48%, #FAC0C4 99.52%);
 $cGradient-number1: linear-gradient(154deg, #ED9D57 3.27%, #F4D95F 96.73%);
 $cGradient-number2: linear-gradient(153deg, #FF6E8B 2.88%, #FBB9BF 97.12%);
 $cGradient-number3: linear-gradient(338deg, #BBEBDC 4.85%, #79A2DC 95.15%);
+$cGradient-course1: linear-gradient(to right, #f66584,#fbccd0);
+$cGradient-course2: linear-gradient(to right, #b0e9ee,#6777e8);
+$cGradient-course3: linear-gradient(to right, #ebde43,#6be8a5);
 
 // フォント
 $ff-base: "Noto Sans JP", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; // 日本語標準
