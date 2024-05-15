@@ -5,7 +5,7 @@
         @extend .c-roundBtn;
 
         .c-roundBtn__link {
-            max-width: 15.7rem;
+            min-width: 15.7rem;
             padding: .8rem .3rem .8rem .31rem;
             font-size: 1.6rem;
         }
@@ -18,8 +18,8 @@
         font-weight: 500;
         line-height: normal;
         color: g.$cWhite;
-        max-width: 31.1rem;
-        padding: 1.9rem 5.5rem 2.3rem 5.6rem;
+        min-width: 31.1rem;
+        padding: 1.9rem 0 2.3rem;
         position: relative;
         display: flex;
         justify-content: center;

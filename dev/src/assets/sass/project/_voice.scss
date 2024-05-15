@@ -1,7 +1,7 @@
 @use '../global' as g;
 
 .p-voice {
-    padding: 9.5rem 0 8rem;
+    padding: 9.5rem 0 6.6rem;
     @include g.mq(sp) {
         padding: 5.5rem 0 10.6rem;
     }
@@ -38,7 +38,7 @@
             }
 
             .p-voice__course {
-                padding: .8rem 3.1rem .7rem;
+                padding: .8rem 0 .7rem;
             }
         }
 
@@ -51,7 +51,7 @@
 
             .p-voice__course {
                 max-width: 19.6rem;
-                padding: .8rem 1.4rem .7rem 1.3rem;
+                padding: .8rem 0 .7rem;
             }
         }
     }
@@ -64,7 +64,7 @@
     &__course {
         margin: 0 auto;
         max-width: 16.2rem;
-        padding: .8rem 1.6rem .7rem 1.8rem;
+        padding: .8rem 0 .7rem;
         border-radius: .6rem;
         background: g.$cGradient-course1;
         text-align: center;

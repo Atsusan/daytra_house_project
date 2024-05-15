@@ -4,6 +4,7 @@ $sub-color: #1C5C83 ; // サブカラー
 $base-color: #EBF3F6; //　ベースカラー
 $text-color: #000; // テキストカラー
 $cBlue: #65A4E0;
+$cRed: #FF4D2B;
 $cWhite: #fff;
 $cLiteWhite: #F5F5F5;
 $cGray: #707070; // グレー
@@ -26,6 +27,8 @@ $cGradient-number3: linear-gradient(338deg, #BBEBDC 4.85%, #79A2DC 95.15%);
 $cGradient-course1: linear-gradient(to right, #f66584,#fbccd0);
 $cGradient-course2: linear-gradient(to right, #b0e9ee,#6777e8);
 $cGradient-course3: linear-gradient(to right, #ebde43,#6be8a5);
+$cGradient-contact: linear-gradient(177deg, #98D5D9 1.53%, #4EB2D0 98.47%);
+$cGradient-contact-bg: linear-gradient(to right, #6ca9df 0%, #a4d8dc);
 
 // フォント
 $ff-base: "Noto Sans JP", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; // 日本語標準
@@ -41,7 +44,7 @@ $sp-width: 769px; // スマホサイズ
 $breakpoints: (
   // スマホ以下の場合
   "sp": "screen and (max-width: #{$sp-width - 1px})",
-  "hover": "screen and (min-width: #{$sp-width + 1px})",
+  "hover": "screen and (min-width: #{$sp-width})",
   // タブレット以下の場合
   "tab": "screen and (max-width: #{$inner-width - 1px})",
   // タブレット以上の場合

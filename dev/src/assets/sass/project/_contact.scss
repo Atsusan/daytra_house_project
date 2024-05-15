@@ -1,0 +1,355 @@
+@use '../global' as g;
+
+.p-contact {
+    padding: 4.2rem 0;
+    background: url(../images/contact-bg.jpg) no-repeat center center/cover;
+    position: relative;
+    @include g.mq(sp) {
+        padding: 5.7rem 0 5.4rem;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:g.$cGradient-contact-bg;
+        opacity: .2;
+        pointer-events: none;
+    }
+
+    @include g.mq(sp) {
+        background: g.$cGradient-contact;
+    }
+
+    &__container {
+        border-radius: 13px;
+        background: rgba(255, 255, 255, 0.69);
+        max-width: 100.2rem;
+        margin: 0 auto;
+        padding: 3.9rem 4.7rem 3.7rem;
+        position: relative;
+        @include g.mq(sp) {
+            max-width: 100%;
+            padding: 0 2.1rem;
+            border-radius: unset;
+            background: transparent;
+        }
+    }
+
+    &__title {
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: normal;
+        color: g.$text-color;
+        text-align: center;
+        @include g.mq(sp) {
+            font-size: 24px;
+            color: g.$cWhite;
+        }
+    }
+
+    &__read {
+        margin-top: 1.8rem;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: normal;
+        color: g.$text-color;
+        @include g.mq(sp) {
+            color: g.$cWhite;
+            text-align: left;
+        }
+    }
+
+    &__readMust {
+        margin-top: 3.1rem;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: normal;
+        color: g.$cRed;
+        @include g.mq(sp) {
+            margin-top: 0.8rem;
+        }
+    }
+
+    &__form {
+        margin-top: 2.8rem;
+        @include g.mq(sp) {
+            margin-top: 2.1rem;
+        }
+    }
+
+    &__dl {
+        //
+    }
+
+    &__itemBox {
+        margin-top: 1.8rem;
+
+        &--mtNone {
+            @extend .p-contact__itemBox;
+            margin-top: 0;
+        }
+        &--mtLargeSp {
+            @extend .p-contact__itemBox;
+            @include g.mq(sp) {
+                margin-top: 3.3rem;
+            }
+        }
+    }
+    &__dt {
+        display: flex;
+        align-items: center;
+    }
+    &__dtText {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: normal;
+        color: g.$text-color;
+        @include g.mq(sp) {
+            color: g.$cWhite;
+        }
+    }
+
+    &__dtMust {
+        margin-left: 0.8rem;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: normal;
+        color: g.$cRed;
+    }
+
+    &__dd {
+        margin-top: 0.4rem;
+    }
+
+    // 共通
+    &__input,
+    &__textarea,
+    &__agreementLabel {
+        // フォーム内の初期化、基礎情報
+        border: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background-image: none;
+        border-radius: 0;
+        outline: none;
+    }
+
+    &__input {
+        border-radius: 1.1rem;
+        background-color: g.$cWhite;
+        width: 100%;
+        height: 5.4rem;
+        display: block;
+        padding: 0.5em 0.7em;
+    }
+
+    &__textarea {
+        resize: none;
+        width: 100%;
+        min-height: 17.7rem;
+        border-radius: 1.1rem;
+        padding: 0.5em 0.7em;
+        @include g.mq(sp) {
+            min-height: 23.3rem;
+        }
+    }
+    &__agreementArea {
+        margin-top: 3.2rem;
+        @include g.mq(sp) {
+            margin-top: 3.6rem;
+        }
+    }
+
+    &__agreementLabel {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__agreementInput {
+        display: none;
+        /* 非表示にしたデフォルトのラジオボタンにチェックが入ると、オリジナルボタンのチェックも透明を解除して表示する */
+        &:checked + .p-contact__agreementLabelSpan::after {
+            opacity: 1;
+        }
+    }
+    &__agreementLabelSpan {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: normal;
+        color: g.$text-color;
+        cursor: pointer;
+        display: inline-block;
+        padding-left: 3rem;
+        margin-left: 1.2rem;
+        position: relative;
+        @include g.mq(sp) {
+            color: g.$cWhite;
+        }
+     /* 擬似要素beforeとafterを共通でセット */
+        &::before,
+        &::after {
+        content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+         }
+        /* beforeをラジオボタンの枠として利用するため、デザインを適用する */
+        &::before {
+            background: transparent;
+            border: 1px solid g.$text-color;
+            display: block;
+            left: 0;
+            width: 1.6rem;
+            height: 1.6rem;
+            @include g.mq(sp) {
+                border: 1px solid g.$cWhite;
+            }
+        }
+         /* マウスクリック時の挙動 */
+        &:active::before {
+            // カラー設定できる
+        }
+        /* afterは枠の中のチェックマークとして利用するため、デザインを適用する
+        デフォルトのチェックマークはopacity:0で透明にしておく*/
+        &::after {
+            border: 1px solid transparent;
+            left: 0;
+            width: 0.7rem;
+            height: 1rem;
+            border-right: 2px solid g.$text-color;
+            border-bottom: 2px solid g.$text-color;
+            transform: translate(60%, -60%) rotate(45deg);
+            transition: opacity 0.3s ease 0s;
+            opacity: 0;
+            @include g.mq(sp) {
+                border-right: 2px solid g.$cWhite;
+                border-bottom: 2px solid g.$cWhite;
+            }
+        }
+    }
+
+    &__agreementLabelLink {
+        display: inline-block;
+        position: relative;
+        transition: opacity .3s;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -0.2rem;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: g.$text-color;
+            @include g.mq(sp) {
+                display: none;
+            }
+        }
+
+        &:hover {
+            @include g.mq(hover) {
+                opacity: .7;
+            }
+        }
+    }
+
+    &__btnBox {
+        margin-top: 2.7rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btn {
+        &.-disabled { /* 条件未達成時 */
+            background: #b2b2b2;
+            color: #fff;
+            &::before,&::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 5.2rem;
+                background: #b2b2b2;
+                transition: .3s;
+            }
+        }
+
+        border-radius: 4.5rem;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2.4rem;
+        color: g.$cWhite;
+        min-width: 26.2rem;
+        min-height: 5.7rem;
+        position: relative;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+            content:"";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left:0;
+            transition:0.5s;
+            background: g.$cGradient2;
+            border-radius: 5.2rem;
+        }
+
+        &::after {
+            content:"";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -2;
+            top: 0;
+            left: 0;
+            background: g.$cGradient2-hover;
+            border-radius: 5.2rem;
+        }
+
+        &:hover::before {
+            @include g.mq(hover) {
+                opacity: 0;
+            }
+        }
+    }
+
+    &__message {
+        background-color: #fff;
+        padding: 4rem 0;
+        margin-top: 3.1rem;
+        height: 10rem;
+        font-size: 1.4rem;
+        box-shadow: 0 3px 5px rgba(62, 62, 62, 0.2);
+        text-align: center;
+        display: none;
+        border-radius: 1.1rem;
+    }
+
+    &__message--error {
+        background-color: #fff;
+        box-shadow: 0 3px 5px rgba(62, 62, 62, 0.2);
+        font-size: 1.4rem;
+        height: 10rem;
+        margin-top: 3.1rem;
+        padding: 4rem 0;
+        text-align: center;
+        color: red;
+        display: none;
+        border-radius: 1.1rem;
+    }
+}
