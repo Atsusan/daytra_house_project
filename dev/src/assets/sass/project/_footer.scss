@@ -1,0 +1,111 @@
+@use '../global' as g;
+
+.p-footer {
+     background-color: g.$sub-color;
+     padding: 4.9rem 0 1.9rem;
+     overflow: hidden;
+     @include g.mq(sp) {
+        padding: 2.9rem 0 2.1rem;
+    }
+
+    &__inner {
+
+    }
+
+    &__contents {
+        display: flex;
+        align-items: center;
+        @include g.mq(sp) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__logoBox {
+        max-width: 27.3rem;
+        @include g.mq(sp) {
+            max-width: 20.5rem;
+            margin-left: -2rem;
+        }
+    }
+
+    &__logo {
+        //
+    }
+
+    &__nav {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        margin-right: 2.2rem;
+        @include g.mq(sp) {
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 2.2rem;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__list {
+        display: flex;
+        @include g.mq(sp) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        margin-left: 2.8rem;
+        @include g.mq(sp) {
+            margin-left: 0;
+            margin-top: 1.4rem;
+        }
+        &--mlNone {
+            @extend.p-footer__item;
+            margin-left: 0;
+
+            @include g.mq(sp) {
+                margin-top: 0;
+            }
+        }
+    }
+    &__itemLink {
+        display: inline-block;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: normal;
+        color: g.$cWhite;
+        transition: opacity .3s;
+
+        &:hover {
+            @include g.mq(hover) {
+                opacity: .7;
+            }
+        }
+    }
+
+    &__conversion {
+        margin-left: 2.8rem;
+        position: relative;
+        z-index: 10;
+        @include g.mq(sp) {
+            margin-left: 0;
+            margin-top: 1.6rem;
+        }
+    }
+    
+    &__snsArea {
+        @include g.mq(sp) {
+            margin-top: 2.2rem;
+        }
+    }
+    
+    &__copyright {
+        margin-top: 4.9rem;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: normal;
+        color: g.$cWhite;
+    }
+}

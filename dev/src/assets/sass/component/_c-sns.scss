@@ -2,6 +2,39 @@
 
 .c-sns {
     width: fit-content;
+    &--white {
+        @extend .c-sns;
+        .c-sns__read {
+            position: relative;
+            @include g.mq(sp) {
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: normal;
+                color: g.$cWhite;
+            }
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 1em;
+                width: 2px;
+                background-color: g.$cWhite;
+            }
+            &::before {
+                left: -1rem;
+                transform: translateY(-44%) rotate(-32deg);
+            }
+    
+            &::after {
+                right: -1rem;
+                transform: translateY(-44%) rotate(32deg);
+            }
+        }
+    }
+
     &__read {
         position: relative;
         display: flex;

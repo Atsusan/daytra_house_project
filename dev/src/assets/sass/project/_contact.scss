@@ -1,7 +1,7 @@
 @use '../global' as g;
 
 .p-contact {
-    padding: 4.2rem 0;
+    padding: 4.2rem 0 4.1rem;
     background: url(../images/contact-bg.jpg) no-repeat center center/cover;
     position: relative;
     @include g.mq(sp) {
