@@ -64,8 +64,8 @@ const mySwiper = new Swiper('.swiper', {
       slidesPerView: 5,
       spaceBetween: 6,
     },
-    // 768px以上の場合
-    768: {
+    // 769px以上の場合
+    769: {
       slidesPerView: 4.5,
       spaceBetween: 6,
     }
@@ -137,3 +137,25 @@ $('#js-form input, #js-form textarea').on( 'change', function() {
     $submit.addClass( '-disabled');
   }
 });
+
+
+
+
+
+// var timer = '';
+// window.onresize = function () {
+//   if (timer) {
+//     clearTimeout(timer);
+//   }
+//   timer = setTimeout(function(){
+//     var windowSize = window.innerWidth;
+
+//     if (windowSize < 376) {
+//       console.log('Small!');
+//     } else if (windowSize < 768) {
+//       console.log('Medium!');
+//     } else {
+//       console.log('Large!');
+//     }
+//   }, 200);
+// };
