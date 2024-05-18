@@ -53,7 +53,9 @@
         font-weight: 400;
         line-height: normal;
         color: g.$text-color;
+        white-space: nowrap;
         @include g.mq(sp) {
+            white-space: normal;
             font-size: 2rem;
         }
     }
