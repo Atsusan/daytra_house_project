@@ -33,6 +33,21 @@
                 transform: translateY(-44%) rotate(32deg);
             }
         }
+
+        .c-sns__x {
+            width: 2.5rem;
+            height: 2.6rem;
+        }
+    
+        .c-sns__insta {
+            width: 2.8rem;
+            height: 2.8rem;
+        }
+    
+        .c-sns__youtube {
+            width: 3.2rem;
+            height: 2.2rem;
+        }
     }
 
     &__read {
@@ -80,10 +95,29 @@
     }
 
     &__item {
+        //
     }
+
+    &__x {
+        width: 3.5rem;
+        height: 3.6rem;
+    }
+
+    &__insta {
+        width: 3.5rem;
+        height: 3.6rem;
+    }
+
+    &__youtube {
+        width: 3.9rem;
+        height: 2.8rem;
+    }
+
     &__link {
-        display: block;
         transition: opacity .3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &:hover {
             @include g.mq(hover) {
@@ -91,6 +125,8 @@
             }
         }
     }
+
     &__icon {
+        //
     }
 }
