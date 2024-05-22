@@ -135,6 +135,7 @@
         top: -7rem;
         left: 14.4rem;
         max-width: 14.6rem;
+        z-index: -1;
         @include g.mq(sp) {
             top: 0;
             left: 0;
@@ -147,12 +148,12 @@
         top: -4.8rem;
         right: 4.1rem;
         max-width: 22.4rem;
+        z-index: -1;
         @include g.mq(sp) {
             top: unset;
             bottom: -21.6rem;
             right: -0.6rem;
             max-width: 14.4rem;
-            z-index: -1;
         }
     }
 
@@ -161,6 +162,7 @@
         bottom: -0.4rem;
         left: 0.7rem;
         max-width: 23rem;
+        z-index: -1;
     }
 
     &__bgImgBottomRight {

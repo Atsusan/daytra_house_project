@@ -2,7 +2,7 @@
 
 .p-info {
     background-color: g.$main-color;
-    padding: 4rem 0 7.2rem;
+    padding: 7.2rem 0;
     @include g.mq(sp) {
         padding: 5rem 0 7.2rem;
     }

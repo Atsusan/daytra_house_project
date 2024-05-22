@@ -25,7 +25,7 @@
     }
 
     &__container {
-        border-radius: 13px;
+        border-radius: 1.3rem;
         background: rgba(255, 255, 255, 0.69);
         max-width: 100.2rem;
         margin: 0 auto;
@@ -46,7 +46,7 @@
         color: g.$text-color;
         text-align: center;
         @include g.mq(sp) {
-            font-size: 24px;
+            font-size: 2.4rem;
             color: g.$cWhite;
         }
     }
