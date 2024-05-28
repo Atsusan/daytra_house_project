@@ -7,7 +7,7 @@ $drawer-textColor: #555;
 // 間隔
 $drawer-gap: 3rem; //item間隔
 
-.p-drower {
+.p-drawer {
   margin-left: auto;
   position: relative;
   z-index: 100;
@@ -118,7 +118,7 @@ $drawer-gap: 3rem; //item間隔
 }
 
 /* ナビゲーションの縦スクロール */
-#js-g-nav.panelactive .p-drower-listArea {
+#js-g-nav.panelactive .p-drawer-listArea {
   /* ナビの数が増えた場合の縦スクロール処理 */
   position: fixed;
   z-index: 90;
@@ -130,7 +130,7 @@ $drawer-gap: 3rem; //item間隔
 
 /* ここまで ドロワー共通CSS */
 
-.p-drower {
+.p-drawer {
   &__nav {
     /* position: fixd;にし、z-indexの数値を大きくして前面へ */
     position: fixed;
